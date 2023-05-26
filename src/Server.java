@@ -100,7 +100,8 @@ public class Server implements Runnable{
                             out.println("no nickname provided");
                         }
                     } else if(message.startsWith("/quit")){
-                        broadcast(nickname + "left the chat!");
+                        broadcast(nickname + " left the chat!");
+                        System.out.println(nickname + " disconnected");
                         shutdown();
                     } else {
                         broadcast(nickname + ": " + message);
